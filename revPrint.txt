@@ -1,0 +1,17 @@
+     SinglyLinkedListNode *current,*prev,*forw;
+          current=head;
+          prev=NULL;
+          while(current!=NULL)
+          {
+             forw=current->next;
+             current->next=prev;
+             prev=current;
+             current=forw;
+          }
+          head=prev;
+          current=head;
+          while(current!=NULL)
+          {
+              printf("%d\n",current->data);
+              current=current->next;
+          }
